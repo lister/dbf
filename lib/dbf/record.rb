@@ -8,7 +8,7 @@ module DBF
     # @version [String]
     # @memo [DBF::Memo]
     def initialize(data, columns, version, memo)
-      @data = StringIO.new(data)
+      @data = StringIO.new(data) if data
       @columns, @version, @memo = columns, version, memo
     end
 
